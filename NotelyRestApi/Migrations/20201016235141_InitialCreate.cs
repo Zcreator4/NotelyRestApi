@@ -15,6 +15,7 @@ namespace NotelyRestApi.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Subject = table.Column<string>(nullable: true),
                     Detail = table.Column<string>(nullable: true),
+                    CreatedDate = table.Column<DateTime>(nullable: false),
                     LastModified = table.Column<DateTime>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false)
                 },

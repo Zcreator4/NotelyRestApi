@@ -9,7 +9,7 @@ using NotelyRestApi.Database;
 namespace NotelyRestApi.Migrations
 {
     [DbContext(typeof(NotelyDbContext))]
-    [Migration("20200930013132_InitialCreate")]
+    [Migration("20201016235141_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,6 +23,9 @@ namespace NotelyRestApi.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Detail")
                         .HasColumnType("TEXT");
